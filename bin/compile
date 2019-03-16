@@ -3,7 +3,7 @@
 BUILD_DIR=$1
 INSTALL_DIR=$BUILD_DIR/vendor
 PROFILE_DIR=$BUILD_DIR/.profile.d
-PACKAGE_URL="https://xpdfreader-dl.s3.amazonaws.com/xpdf-tools-linux-4.00.tar.gz"
+PACKAGE_URL="https://xpdfreader-dl.s3.amazonaws.com/xpdf-tools-linux-4.01.01.tar.gz"
 
 echo ""
 echo "-----> Installing"
@@ -13,8 +13,8 @@ mkdir -p $INSTALL_DIR
 cd $INSTALL_DIR
 curl $PACKAGE_URL -s | tar xz
 mkdir -p $INSTALL_DIR/pdftotext/bin
-mv xpdf-tools-linux-4.00/bin64/pdftotext $INSTALL_DIR/pdftotext/bin
-rm -rf xpdf-tools-linux-4.00
+mv xpdf-tools-linux-4.01.01/bin64/pdftotext $INSTALL_DIR/pdftotext/bin
+rm -rf xpdf-tools-linux-4.01.01
 
 echo "-----> Creating runtime environment"
 echo ""
